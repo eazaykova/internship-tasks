@@ -9,6 +9,7 @@ class SpoilerList extends Component {
 
   handleClick = () => {
     const parent = event.target.closest(".spoiler");
+    if (!parent) return;
     const content = parent.lastElementChild;
 
     if (parent.classList.contains("spoiler-show")) {
